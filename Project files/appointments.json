@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1751263159590,
+    "doctorId": 1751260182114,
+    "doctorName": "sohail syed",
+    "specialty": "dermatologist",
+    "patientId": 1751027224061,
+    "patientName": "SYED SOHAIL",
+    "date": "2025-07-01",
+    "time": "02:00",
+    "reason": "xyz",
+    "status": "Completed",
+    "precautions": "avoid cool drink",
+    "prescription": "xyz - Morning"
+  }
+]
