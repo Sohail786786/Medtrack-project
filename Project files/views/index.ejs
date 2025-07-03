@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack | Cloud Healthcare Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dark-cyan: #028090;
+            --muted-blue: #05668D;
+            --teal: #00a896;
+            --greenish-blue: #02c39a;
+            --ghost-White: #f7fafc;
+            --gray: #5f6368;
+            --light-gray: #f8f9fa;
+
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+                body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--gray);
+            background-color: var(--ghost-white);
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: var(--ghost-white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: static;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-cyan);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--ghost-White);
+            color: var(--dark-cyan);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--ghost-White);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 5% 4rem;
+            background: var(--dark-cyan);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--ghost-White);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--ghost-White);
+        }
+                /* Features Section */
+        .features {
+            padding: 2rem 5%;
+            background: var(--ghost-White);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-cyan);
+            margin-bottom: 1rem;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #028090; /* Secondary color for headings */
+        }
+        
+        .bg-primary {
+            background-color: #00A896;
+        }
+
+        .bg-secondary {
+            background-color: #028090;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links li {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-heartbeat text-primary text-2xl"></i>MedTrack</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+        <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Simplifying Healthcare for Everyone</h1>
+        <p>Access your medical needs anytime, anywhere.</p>
+        <a href="#services" class="btn btn-primary">Book an Appointment</a>
+    </section>
+
+        <!-- Features Section -->
+    <section class="features" id="services">
+        <div class="section-title">
+            <h2>Features Designed For You</h2>
+            <p>Experience seamless healthcare management with our comprehensive set of features.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure Login</h3>
+                    <p class="text-gray-600">Military-grade encryption for your sensitive health data and personal information.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-check text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Appointment Booking</h3>
+                    <p class="text-gray-600">Schedule, reschedule, or cancel appointments with just a few taps.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-medical text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Medical History</h3>
+                    <p class="text-gray-600">Complete digital records accessible anytime, anywhere, by authorized providers.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bell text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Real-Time Updates</h3>
+                    <p class="text-gray-600">Instant notifications for appointments, test results, and important updates.</p>
+                </div>
+            </div>
+    </section>
+    <!-- Why Choose MedTrack Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Why Choose MedTrack?</h2>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-white">
+                            <i class="fas fa-check text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-lg font-medium text-gray-900">HIPAA Compliant</h3>
+                        <p class="mt-1 text-gray-600">Our platform meets all healthcare privacy and security requirements.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-white">
+                            <i class="fas fa-check text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-lg font-medium text-gray-900">24/7 Access</h3>
+                        <p class="mt-1 text-gray-600">Your health information available whenever you need it.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-white">
+                            <i class="fas fa-check text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-lg font-medium text-gray-900">Seamless Integration</h3>
+                        <p class="mt-1 text-gray-600">Works with major EHR systems for uninterrupted provider workflows.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="flex items-center justify-center h-6 w-6 rounded-full bg-primary text-white">
+                            <i class="fas fa-check text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-lg font-medium text-gray-900">Patient-Centered</h3>
+                        <p class="mt-1 text-gray-600">Designed with both patients and providers in mind for optimal experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-heartbeat text-primary mr-2"></i>
+                        MedTrack
+                    </h3>
+                    <p class="text-gray-400">Empowering the future of healthcare through secure, accessible technology.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">For Doctors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Guntur,Andhra Pradesh</li>
+                        <li class="text-gray-400"><i class="fas fa-phone text-primary mr-2"></i> 0863-616161 </li>
+                        <li class="text-gray-400"><i class="fas fa-envelope text-primary mr-2"></i>228x1a4561@khitguntur.ac.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MedTrack. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
